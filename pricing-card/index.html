@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing Card</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h2>Choose Your Plan</h2>
+      <p>Select the perfect pricing plan for your needs</p>
+    </header>
+    <main>
+      <div id="card-container">
+        <div class="card" id="basic">
+          <i class="fa-solid fa-rocket"></i>
+          <h2>Basic</h2>
+          <p>$ 9/month</p>
+          <p>Perfect for individuals and small projects</p>
+
+          <ul class="details-section">
+            <li class="available">5 projects</li>
+            <li class="available">20GB Storage</li>
+            <li class="available">Email Notifications</li>
+            <li class="unavailable">Advanced Analytics</li>
+            <li class="unavailable">Custom Domain</li>
+          </ul>
+
+          <button class="start-btn">Get Started</button>
+        </div>
+
+        <div class="card" id="pro">
+          <i class="fa-solid fa-gem"></i>
+          <h2>Pro</h2>
+          <p>$ 29/month</p>
+          <p>Ideal for growing teams and serious projects</p>
+
+          <ul class="details-section">
+            <li class="available">20 projects</li>
+            <li class="available">100GB Storage</li>
+            <li class="available">Priority Support</li>
+            <li class="available">Advanced Analytics</li>
+            <li class="unavailable">Dedicated Account Manager</li>
+          </ul>
+
+          <button class="start-btn">Upgrade to Pro</button>
+        </div>
+
+        <div class="card" id="enterprise">
+          <i class="fa-solid fa-building"></i>
+          <h2>Enterprise</h2>
+          <p>Custom Pricing</p>
+          <p>Tailored solutions for large organizations</p>
+
+          <ul class="details-section">
+            <li class="available">Unlimited projects</li>
+            <li class="available">Unlimited Storage</li>
+            <li class="available">24/7 Premium Support</li>
+            <li class="available">Advanced Security & Compliance</li>
+            <li class="available">Dedicated Account Manager</li>
+          </ul>
+
+          <button class="start-btn">Contact Sales</button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

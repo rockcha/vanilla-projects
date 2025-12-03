@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+    rel="stylesheet" /> <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen active" id="start-screen">
+        <h1>
+          오늘의 퀴즈
+          <i class="fa-regular fa-circle-question"></i>
+        </h1>
+
+        <p>퀴즈는 총 5개입니다! 나는 몇점일까?</p>
+        <button class="btn" id="start-btn">
+          도전하기 <i class="fa-solid fa-play"></i>
+        </button>
+      </div>
+      <div class="screen" id="quiz-screen">
+        <h1 id="question">퀴즈 영역</h1>
+        <div class="quiz-header">
+          <div>
+            <span id="current-question">1</span> /
+            <span id="total-question">5</span>
+          </div>
+          <div>score: <span id="score">0</span></div>
+        </div>
+        <div class="answer-container" id="answer-container">
+          <button class="answer-btn"></button>
+          <button class="answer-btn"></button>
+          <button class="answer-btn"></button>
+          <button class="answer-btn"></button>
+        </div>
+
+        <div class="progress-bar">
+          <div id="progress" class="progress"></div>
+        </div>
+      </div>
+      <div class="screen" id="result-screen">
+        <h1>결과보기 <i class="fa-solid fa-trophy"></i></h1>
+        <div class="result-info">
+          You scored <span id="score-span">3 </span>out of
+          <span id="total-span">5</span>
+        </div>
+
+        <button class="btn" id="restart-btn">
+          재도전하기 <i class="fa-solid fa-reply"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

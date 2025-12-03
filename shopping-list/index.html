@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <header>
+        <h1>Shopping List</h1>
+      </header>
+      <div id="input-section">
+        <input id="add-input" type="text" placeholder="Enter item name" />
+        <button id="add-btn">Add</button>
+      </div>
+
+      <div id="tab-section">
+        <button class="tab-btn active" id="all">All</button>
+        <button class="tab-btn" id="incomplete">Incomplete</button>
+        <button class="tab-btn" id="completed">Completed</button>
+      </div>
+      <ul id="list-container" class="list-container"></ul>
+      <ul class="empty-container">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <p>Nothing is on the list</p>
+      </ul>
+
+      <div id="util-section">
+        <button id="clear-all">Clear All</button>
+        <button id="clear-completed">Clear Completed</button>
+      </div>
+    </div>
+  </body>
+</html>

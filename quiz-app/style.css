@@ -1,0 +1,116 @@
+:root {
+  --font-kr: "Gowun Dodum", "Noto Sans KR", "Apple SD Gothic Neo", "Segoe UI",
+    Arial, sans-serif;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-boxs;
+  font-family: var(--font-kr);
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+}
+
+.container {
+  max-width: 500px;
+  background-color: whitesmoke;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.screen {
+  width: 100%;
+  display: none;
+  text-align: center;
+}
+
+.screen.active {
+  display: block;
+}
+
+#start-screen h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+#start-screen p {
+  font-size: 1.2rem;
+  color: gray;
+  margin-bottom: 1rem;
+}
+button {
+  color: white;
+  background-color: coral;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: orange;
+  cursor: pointer;
+}
+
+.answer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.answer-btn.correct {
+  background-color: lightgreen;
+}
+
+.answer-btn.incorrect {
+  background-color: lightpink;
+}
+
+.answer-container {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  height: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: white;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: coral;
+  transition: width 0.3s ease;
+  width: 20%;
+  height: 100%;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+#result-screen h1 {
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.result-info {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+#score-span {
+  font-weight: bold;
+  color: green;
+}
+#total-span {
+  font-weight: bold;
+  color: coral;
+}

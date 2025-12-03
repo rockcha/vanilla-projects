@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>회원 등록하기</title>
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+    rel="stylesheet" /> <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <h1>암호 자동생성</h1>
+      <div id="password-section">
+        <input type="text" readonly id="password" />
+        <button id="copy-btn">copy</button>
+      </div>
+
+      <div id="options">
+        <div class="opiton">
+          <label for="length">암호 길이</label>
+          <input type="range" min="1" max="15" id="length" />
+          <div id="length-value"></div>
+        </div>
+        <div class="opiton">
+          <label for="lowercase">소문자 포함</label>
+          <input type="checkbox" id="lowercase" />
+        </div>
+        <div class="opiton">
+          <label for="uppercase">대문자 포함</label>
+          <input type="checkbox" id="uppercase" />
+        </div>
+        <div class="opiton">
+          <label for="number">숫자 포함</label>
+          <input type="checkbox" id="number" />
+        </div>
+      </div>
+      <button id="generate-btn">생성하기</button>
+
+      <div id="progress-section">
+        <h2>암호 위험수준</h2>
+        <div id="progress-bar">
+          <div id="progress"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

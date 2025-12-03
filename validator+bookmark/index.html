@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>회원 등록하기</title>
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+    rel="stylesheet" /> <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <form id="form">
+        <h2><i class="fa-solid fa-user-plus"></i> 유저 등록</h2>
+        <div class="form-group">
+          <label for="user">이름</label>
+          <input id="user" type="text" placeholder="이름을 입력하세요" />
+          <div class="msg">메세지</div>
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input id="email" type="text" placeholder="이메일을 입력하세요" />
+          <div class="msg">메세지</div>
+        </div>
+
+        <button type="submit" id="add-btn">등록</button>
+      </form>
+      <h2><i class="fa-solid fa-address-card"></i> 유저 명단</h2>
+      <ul id="users-list"></ul>
+    </div>
+  </body>
+</html>

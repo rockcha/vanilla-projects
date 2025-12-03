@@ -1,0 +1,112 @@
+:root {
+  --font-kr: "Gowun Dodum", "Noto Sans KR", "Apple SD Gothic Neo", "Segoe UI",
+    Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-kr);
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("https://img.freepik.com/free-vector/hand-drawn-shopping-pattern-design_23-2149628702.jpg?semt=ais_hybrid&w=740&q=80");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrap {
+  width: 500px;
+  background-color: whitesmoke;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  opacity: 90%;
+}
+
+button {
+  cursor: pointer;
+  padding: 0.3rem 0.5rem;
+}
+
+#input-section {
+  display: flex;
+  gap: 0.3rem;
+  width: 100%;
+}
+
+#add-input {
+  flex: 1;
+  padding: 0.3rem 0.5rem;
+}
+
+#list-container {
+  width: 100%;
+  border-top: 1px solid lightgray;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  align-items: center;
+  justify-items: center;
+}
+.list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+.list-item.completed input[type="text"] {
+  text-decoration: line-through;
+}
+
+.list-item input[type="text"] {
+  background-color: aliceblue;
+  border: 1px solid lightgray;
+  flex: 1;
+  padding: 0.3rem 1.5rem;
+}
+#util-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  width: 100%;
+  border-top: 1px solid lightgray;
+  padding-top: 1rem;
+}
+
+.tab-btn.active {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.empty-container.hidden {
+  display: none;
+}
+
+.empty-container {
+  width: 100%;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 3rem;
+}

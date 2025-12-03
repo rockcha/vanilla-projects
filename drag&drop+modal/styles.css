@@ -1,0 +1,93 @@
+:root {
+  --font-kr: "Gowun Dodum", "Noto Sans KR", "Apple SD Gothic Neo", "Segoe UI",
+    Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-kr);
+}
+
+body {
+  min-height: 100vh;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(30deg, #6366f1, #22d3ee);
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  width: clamp(320px, 90%, 600px);
+
+  background-color: white;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.lists {
+  width: 100%;
+  list-style: none;
+  user-select: none;
+  counter-reset: num;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.list {
+  counter-increment: num;
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  border: 1px solid gray;
+
+  align-items: center;
+
+  line-height: 25px;
+}
+
+.list::before {
+  content: counter(num);
+  font-weight: bold;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#openModal-btn {
+  padding: 1rem;
+
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+#modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+#modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: 3px;
+}

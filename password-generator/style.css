@@ -1,0 +1,140 @@
+:root {
+  --font-kr: "Gowun Dodum", "Noto Sans KR", "Apple SD Gothic Neo", "Segoe UI",
+    Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-kr);
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(45deg, skyblue, pink);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrap {
+  background-color: whitesmoke;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+}
+
+h1 {
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+#password-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+#password {
+  flex: 1;
+}
+
+#copy-btn {
+  padding: 0.3rem 0.6rem;
+}
+
+#options {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.opiton,
+.option.selected {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#lowercase {
+  size: 1rem;
+}
+
+.option.selected label {
+  color: green;
+  font-weight: bold;
+}
+
+#generate-btn {
+  width: 100%;
+  padding: 0.3rem 0.6rem;
+}
+
+#progress-section {
+  width: 100%;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+#progress-section h2 {
+  font-size: 1rem;
+}
+#progress-bar {
+  width: 100%;
+  background-color: white;
+
+  border: 1px solid gray;
+  height: 1.3rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+#progress {
+  width: 20%;
+  height: 100%;
+  background-color: red;
+  transition: width 0.5s ease;
+}
+
+label {
+  font-size: 0.5rem;
+  color: gray;
+}
+
+#length {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  background-color: coral;
+  color: white;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
