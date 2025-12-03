@@ -49,9 +49,9 @@ body {
   overflow: hidden;
   border-radius: 0.5rem;
   border: 1px solid gray;
-
+  cursor: grabbing;
   align-items: center;
-
+  background-color: white;
   line-height: 25px;
   justify-content: space-between;
 }
@@ -101,4 +101,11 @@ body {
 
 #lists:empty + p {
   display: block;
+}
+
+.list.dragging {
+  cursor: grabbing;
+  background-color: aqua;
+  opacity: 1;
+  border: 1px solid black;
 }

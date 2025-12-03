@@ -28,6 +28,13 @@ function addList(text) {
   li.className = "list";
   li.draggable = true;
 
+  li.addEventListener("dragstart", (e) => {
+    e.target.classList.add("dragging");
+  });
+  li.addEventListener("dragend", (e) => {
+    e.target.classList.remove("dragging");
+  });
+
   const removeButton = document.createElement("button");
   removeButton.textContent = "remove";
   removeButton.addEventListener("click", () => {
@@ -37,3 +44,24 @@ function addList(text) {
   li.appendChild(removeButton);
   lists.appendChild(li);
 }
+
+lists.addEventListener("dragover", (e) => {
+  e.preventDefault();
+  const target = e.target.closest("li");
+  const draggedItem = document.querySelector(".dragging");
+  if (target && target !== draggedItem) {
+    //유효한 target이다
+
+    const { top, height } = target.getBoundingClientRect();
+
+    const midPoint = top + height / 2;
+
+    if (e.clientY < midPoint) {
+      //위에있다면,
+      target.before(draggedItem);
+    } else {
+      //아래에 있다면,
+      target.after(draggedItem);
+    }
+  }
+});
