@@ -24,19 +24,21 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint tempore
         nostrum aut!
       </p>
-      <ul class="lists">
-        <li class="list">list1</li>
-        <li class="list">list2</li>
-        <li class="list">list3</li>
-        <li class="list">list4</li>
-      </ul>
+      <ul id="lists" class="lists"></ul>
+
+      <p id="msg">no items here</p>
 
       <button id="openModal-btn">Open</button>
 
       <dialog id="modal">
         <form>
           <h3>Add list</h3>
-          <input type="text" placeholder="add list here!" autofocus />
+          <input
+            id="add-input"
+            type="text"
+            placeholder="add list here!"
+            autofocus
+          />
           <button id="add-list-btn">Add</button>
         </form>
       </dialog>

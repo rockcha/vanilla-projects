@@ -7,8 +7,33 @@ openModalBtn.addEventListener("click", () => {
 modal.addEventListener("click", (e) => {
   if (e.target === e.currentTarget) {
     modal.close();
-  } else {
-    const msg = `${e.target} 클릭함`;
-    alert(msg);
   }
 });
+
+const addListBtn = document.getElementById("add-list-btn");
+
+const addInput = document.getElementById("add-input");
+const lists = document.getElementById("lists");
+
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!addInput.value.trim()) return;
+  addList(addInput.value.trim());
+});
+
+function addList(text) {
+  const li = document.createElement("li");
+  li.textContent = text;
+  li.className = "list";
+  li.draggable = true;
+
+  const removeButton = document.createElement("button");
+  removeButton.textContent = "remove";
+  removeButton.addEventListener("click", () => {
+    li.remove();
+  });
+
+  li.appendChild(removeButton);
+  lists.appendChild(li);
+}

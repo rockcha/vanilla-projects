@@ -53,6 +53,7 @@ body {
   align-items: center;
 
   line-height: 25px;
+  justify-content: space-between;
 }
 
 .list::before {
@@ -90,4 +91,14 @@ body {
 #modal::backdrop {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: 3px;
+}
+
+#msg {
+  display: none;
+  padding: 2rem;
+  background-color: gray;
+}
+
+#lists:empty + p {
+  display: block;
 }
