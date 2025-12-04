@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>칸반 보드</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" type="module"></script>
+
+    <script src="task.js" type="module"></script>
+  </head>
+  <body>
+    <dialog id="add-dialog">
+      <form method="dialog" class="add-form">
+        <h2>할 일 추가하기</h2>
+        <input
+          type="text"
+          placeholder="할 일을 입력하세요"
+          autofocus
+          required
+          id="addInput"
+        />
+        <div id="button-group">
+          <button id="cancel-btn" type="submit" value="cancel">취소</button>
+          <button type="submit" value="confirm">추가</button>
+        </div>
+      </form>
+    </dialog>
+    <button id="add-btn"><i class="fa-solid fa-plus"></i></button>
+    <div id="wrap">
+      <h1><i class="fa-solid fa-list-check"></i>칸반 보드</h1>
+
+      <div id="board">
+        <div class="task-container" id="todo-container">
+          <h2 data-taskCnt="0">할 일</h2>
+          <div class="tasks" id="todo-section"></div>
+        </div>
+        <div class="task-container" id="inProgress-container">
+          <h2 data-taskCnt="0">진행 중</h2>
+          <div class="tasks" id="inProgress-section"></div>
+        </div>
+        <div class="task-container" id="done-container">
+          <h2 data-taskCnt="12">완료</h2>
+          <div class="tasks" id="done-section"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
