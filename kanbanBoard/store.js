@@ -13,20 +13,29 @@ export function getData() {
 
 export function loadData() {
   const originTasks = getData();
-  console.log(originTasks);
 
   Object.keys(originTasks).forEach((key) => {
     originTasks[key].forEach((taskItem) => {
-      addTaskByStatus(taskItem.content, key);
+      addTaskByStatus(taskItem.id, taskItem.content, key);
     });
   });
 }
 
 export function saveDataByStatus(taskObj, status) {
   let originTasks = getData();
-  console.log(status, originTasks[status]);
+
   originTasks[status].push(taskObj);
   // 실제 업데이트
 
   localStorage.setItem("tasks", JSON.stringify(originTasks));
+}
+
+export function deleteById(id) {
+  const data = getData();
+
+  Object.keys(data).forEach((key) => {
+    data[key] = data[key].filter((taskObj) => taskObj.id !== id);
+  });
+
+  localStorage.setItem("tasks", JSON.stringify(data));
 }

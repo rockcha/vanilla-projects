@@ -27,10 +27,10 @@ addModal.addEventListener("close", () => {
   const action = addModal.returnValue;
 
   if (action === "confirm") {
-    // update dom
-    addTaskByStatus(input.value.trim(), TASK_STATUS.TODO);
-
     const objId = createId();
+    // update dom
+    addTaskByStatus(objId, input.value.trim(), TASK_STATUS.TODO);
+
     const taskObj = { id: objId, content: input.value.trim() };
     saveDataByStatus(taskObj, TASK_STATUS.TODO);
   }

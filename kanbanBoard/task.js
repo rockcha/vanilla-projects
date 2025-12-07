@@ -1,18 +1,19 @@
-import { saveDataByStatus } from "./store.js";
+import { saveDataByStatus, deleteById } from "./store.js";
 
-export function addTaskByStatus(task, status) {
-  const id = status + "-section";
+export function addTaskByStatus(id, task, status) {
+  const ElId = status + "-section";
 
-  const targetSection = document.getElementById(id);
+  const targetSection = document.getElementById(ElId);
 
-  addTask(task, targetSection);
+  addTask(id, task, targetSection);
 }
 
-function addTask(task, tasksSectionEl) {
+function addTask(id, task, tasksSectionEl) {
   //taskBox에 고유 id dataset을 줘야함.
 
   const taskBox = document.createElement("div");
   taskBox.className = "task";
+  taskBox.dataset.id = id;
 
   const taskContent = document.createElement("div");
   taskContent.textContent = task;
@@ -23,6 +24,14 @@ function addTask(task, tasksSectionEl) {
   const removeButton = document.createElement("button");
   editButton.textContent = "수정";
   removeButton.textContent = "삭제";
+
+  removeButton.addEventListener("click", () => {
+    taskBox.remove();
+
+    //로컬에서 삭제
+    deleteById(taskBox.dataset.id);
+  });
+
   menu.appendChild(editButton);
   menu.appendChild(removeButton);
 
