@@ -1,0 +1,46 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vanilla SPA</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        margin: 0;
+      }
+      header {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        display: flex;
+        gap: 1rem;
+      }
+      a {
+        text-decoration: none;
+        color: #555;
+      }
+      a.active {
+        font-weight: bold;
+        color: #6366f1;
+      }
+      #app {
+        padding: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 공통 레이아웃 -->
+    <header>
+      <!-- 여기 a 태그들이 SPA 네비게이션 -->
+      <a href="/" data-link>홈</a>
+      <a href="/login" data-link>로그인</a>
+      <a href="/about" data-link>소개</a>
+    </header>
+
+    <!-- 여기 안에 페이지별 내용이 바뀜 -->
+    <main id="app"></main>
+
+    <!-- SPA 로직 -->
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
