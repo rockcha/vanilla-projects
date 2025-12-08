@@ -96,5 +96,3 @@ function init() {
   document.addEventListener("click", onLinkClick);
   renderRoute(window.location.pathname);
 }
-
-init();
